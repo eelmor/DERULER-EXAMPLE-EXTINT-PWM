@@ -32,7 +32,8 @@
  * channel (color) can then be set to any value between 0-256 where 0 means fully off and 256 means fully on. With each color having 256
  * different intensities to select from we can create a total of 256 * 256 * 256 = 16.7M different colors. The 256 value is selected as it
  * represents 8 bits. This means we get 8-bit color per channel, or 24-bit total color information (8-bit * 3 colors, red + green + blue).
- * When BUTTON1 is pressed we cycle between colors using hue, saturation, value (HSV) to red, green, blue (RGB) conversion.
+ * When BUTTON1 is pressed we start cycling between colors by adding or subtracting different amounts to the the different color. If the button
+ * is pressed again we stop cycling the colors.
  *
  * In order to generate sound using the magnetic buzzer in our circuit we can also rely on a timer in PWM mode. By adjusting the timer
  * frequency and PWM duty cycle we can generate different sounds. In this example we configure the timer to generate a 100 Hz square wave signal
